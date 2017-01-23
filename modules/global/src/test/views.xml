@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<views xmlns="http://schemas.haulmont.com/cuba/view.xsd">
+    <view class="test.entity.Paraiska"
+          extends="_local"
+          name="paraiska-su-prekem">
+        <property name="paraiskosPrekes"
+                  view="_minimal">
+            <property name="kiekis"/>
+            <property name="pakuote"
+                      view="_minimal">
+                <property name="pavadinimas"/>
+            </property>
+        </property>
+    </view>
+    <view class="test.entity.ParaiskosPreke"
+          extends="_local"
+          name="paraiskosPreke-view">
+        <property name="pakuote"
+                  view="_local">
+        </property>
+    </view>
+</views>

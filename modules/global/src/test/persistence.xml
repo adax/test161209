@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             version="2.0">
+    <persistence-unit name="test161209"
+                      transaction-type="RESOURCE_LOCAL">
+        <class>test.entity.Paraiska</class>
+        <class>test.entity.ParaiskosPreke</class>
+        <class>test.entity.Pakuote</class>
+    </persistence-unit>
+</persistence>
