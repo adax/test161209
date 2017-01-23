@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="test.web.virtualtable.VirtualTableBrowse"
+        focusComponent="virtualTablesTable"
+        lookupComponent="virtualTablesTable"
+        messagesPack="test.web.virtualtable">
+    <dsContext>
+        <collectionDatasource id="virtualTablesDs"
+                              class="test.entity.VirtualTable">
+            <query>
+                <![CDATA[select e from test$VirtualTable e]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout spacing="true">
+        <table id="virtualTablesTable"
+               height="100%"
+               width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+                <action id="refresh"/>
+            </actions>
+            <columns>
+                <column id="darbuotojas"
+                        sortable="false"/>
+                <column id="diena1"
+                        sortable="false"/>
+                <column id="diena2"
+                        sortable="false"/>
+                <column id="diena3"
+                        sortable="false"/>
+                <column id="diena4"
+                        sortable="false"/>
+                <column id="diena5"
+                        sortable="false"/>
+                <column id="diena6"
+                        sortable="false"/>
+                <column id="diena7"
+                        sortable="false"/>
+            </columns>
+            <rows datasource="virtualTablesDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="virtualTablesTable.create"/>
+                <button id="editBtn"
+                        action="virtualTablesTable.edit"/>
+                <button id="removeBtn"
+                        action="virtualTablesTable.remove"/>
+                <button id="refreshBtn"
+                        action="virtualTablesTable.refresh"
+                        invoke="onRefreshBtnClick"/>
+            </buttonsPanel>
+        </table>
+    </layout>
+</window>

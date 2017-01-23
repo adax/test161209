@@ -12,6 +12,8 @@
             <map>
                 <entry key="test_AutonumberService"
                        value="test.service.AutonumberService"/>
+                <entry key="test_VirtualTableService"
+                       value="test.service.VirtualTableService"/>
             </map>
         </property>
     </bean>

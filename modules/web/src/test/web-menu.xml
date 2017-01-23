@@ -4,5 +4,6 @@
           insertBefore="administration">
         <item id="test$Paraiska.browse"/>
         <item id="test$Pakuote.browse"/>
+        <item id="test$VirtualTable.browse"/>
     </menu>
 </menu-config>

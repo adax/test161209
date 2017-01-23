@@ -11,4 +11,8 @@
             template="test/web/pakuote/pakuote-browse.xml"/>
     <screen id="test$Pakuote.edit"
             template="test/web/pakuote/pakuote-edit.xml"/>
+    <screen id="test$VirtualTable.browse"
+            template="test/web/virtualtable/virtual-table-browse.xml"/>
+    <screen id="test$VirtualTable.edit"
+            template="test/web/virtualtable/virtual-table-edit.xml"/>
 </screen-config>
