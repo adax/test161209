@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editCaption"
+        class="test.web.paraiskospreke.ParaiskosPrekeEdit"
+        datasource="paraiskosPrekeDs"
+        focusComponent="fieldGroup"
+        messagesPack="test.web.paraiskospreke">
+    <dsContext>
+        <datasource id="paraiskosPrekeDs"
+                    class="test.entity.ParaiskosPreke"
+                    view="paraiskosPreke-view"/>
+        <collectionDatasource id="pakuotesDs"
+                              class="test.entity.Pakuote"
+                              view="_local">
+            <query>
+                <![CDATA[select e from test$Pakuote e]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="windowActions"
+            spacing="true">
+        <fieldGroup id="fieldGroup"
+                    datasource="paraiskosPrekeDs">
+            <column width="250px">
+                <field id="preke"/>
+                <field id="kiekis"/>
+                <field id="pakuote"
+                       optionsDatasource="pakuotesDs"/>
+            </column>
+        </fieldGroup>
+        <frame id="windowActions"
+               screen="editWindowActions"/>
+    </layout>
+</window>

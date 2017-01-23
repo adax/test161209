@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<screen-config xmlns="http://schemas.haulmont.com/cuba/screens.xsd">
+    <include file="test/screens.xml"/>
+    <screen id="test$Paraiska.edit"
+            template="test/web/paraiska/paraiska-edit.xml"/>
+    <screen id="test$Paraiska.browse"
+            template="test/web/paraiska/paraiska-browse.xml"/>
+    <screen id="test$ParaiskosPreke.edit"
+            template="test/web/paraiskospreke/paraiskos-preke-edit.xml"/>
+    <screen id="test$Pakuote.browse"
+            template="test/web/pakuote/pakuote-browse.xml"/>
+    <screen id="test$Pakuote.edit"
+            template="test/web/pakuote/pakuote-edit.xml"/>
+</screen-config>

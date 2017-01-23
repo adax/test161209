@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="test.web.paraiska.ParaiskaBrowse"
+        focusComponent="paraiskasTable"
+        lookupComponent="paraiskasTable"
+        messagesPack="test.web.paraiska">
+    <dsContext>
+        <collectionDatasource id="paraiskasDs"
+                              class="test.entity.Paraiska"
+                              view="_local">
+            <query>
+                <![CDATA[select e from test$Paraiska e]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="paraiskasTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="paraiskasTable"
+                datasource="paraiskasDs">
+            <properties include=".*"/>
+        </filter>
+        <table id="paraiskasTable"
+               width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="parData"/>
+                <column id="parNr"/>
+                <column id="busena"/>
+                <column id="busenosData"/>
+                <column id="pastaba"/>
+                <column id="klaidosPranesimas"/>
+            </columns>
+            <rows datasource="paraiskasDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="paraiskasTable.create"/>
+                <button id="editBtn"
+                        action="paraiskasTable.edit"/>
+                <button id="removeBtn"
+                        action="paraiskasTable.remove"/>
+            </buttonsPanel>
+        </table>
+    </layout>
+</window>

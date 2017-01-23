@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editCaption"
+        class="test.web.paraiska.ParaiskaEdit"
+        datasource="paraiskaDs"
+        focusComponent="fieldGroup"
+        messagesPack="test.web.paraiska">
+    <dsContext>
+        <datasource id="paraiskaDs"
+                    class="test.entity.Paraiska"
+                    view="paraiska-su-prekem">
+            <collectionDatasource id="paraiskosPrekesDs"
+                                  property="paraiskosPrekes"/>
+        </datasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="windowActions"
+            spacing="true">
+        <fieldGroup id="fieldGroup"
+                    datasource="paraiskaDs">
+            <column width="250px">
+                <field id="parData"/>
+                <field id="parNr"/>
+                <field id="busena"/>
+                <field id="busenosData"/>
+                <field id="pastaba"/>
+                <field id="klaidosPranesimas"/>
+            </column>
+        </fieldGroup>
+        <label value="Prekės"/>
+        <table id="parPrekesTable"
+               height="300px"
+               width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="preke"
+                        caption="Prekė"/>
+                <column id="kiekis"
+                        caption="Kiekis"/>
+                <column id="pakuote.pavadinimas"
+                        caption="Pakuotė"/>
+            </columns>
+            <rows datasource="paraiskosPrekesDs"/>
+            <buttonsPanel>
+                <button id="btnInsert"
+                        action="parPrekesTable.create"/>
+                <button id="btnEdit"
+                        action="parPrekesTable.edit"/>
+                <button id="btnRemove"
+                        action="parPrekesTable.remove"/>
+            </buttonsPanel>
+        </table>
+        <frame id="windowActions"
+               screen="editWindowActions"/>
+    </layout>
+</window>
